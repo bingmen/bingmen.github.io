@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>冰门 · 你好，世界</title>
+  <!-- 引入柔和风格字体，提升可读性 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..600&display=swap" rel="stylesheet">
+  <style>
+    /* 全局重置与变量 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f9fafc;
+      --surface: #ffffff;
+      --text-primary: #1e1e2a;
+      --text-secondary: #4a4a5e;
+      --border-light: #e6e9f0;
+      --accent: #2b2b3c;
+      --accent-soft: #f0f2f8;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+      --radius-lg: 28px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-primary);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1.5rem;
+      margin: 0;
+    }
+
+    /* 主卡片：容器 */
+    .profile-card {
+      max-width: 720px;
+      width: 100%;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem 2.5rem 2rem;
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.02);
+      border: 1px solid var(--border-light);
+      transition: all 0.2s ease;
+      backdrop-filter: blur(2px);
+    }
+
+    /* 头像与组织信息区域 */
+    .org-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--surface);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--border-light);
+      transition: transform 0.2s ease;
+      background-color: var(--accent-soft);
+    }
+
+    .avatar:hover {
+      transform: scale(1.02);
+    }
+
+    .org-name {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+
+    .org-handle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      background: var(--accent-soft);
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      display: inline-block;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      border: 1px solid var(--border-light);
+    }
+
+    /* 主题标语：“你好，世界” */
+    .greeting-section {
+      text-align: center;
+      margin: 1.5rem 0 2.5rem 0;
+    }
+
+    .hello-world {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.3;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.8rem;
+    }
+
+    .hello-world .wave {
+      display: inline-block;
+      animation: wave 2.5s infinite ease-in-out;
+      transform-origin: 70% 70%;
+      font-size: 2.2rem;
+    }
+
+    @keyframes wave {
+      0%, 100% { transform: rotate(0deg); }
+      20% { transform: rotate(14deg); }
+      40% { transform: rotate(-6deg); }
+      60% { transform: rotate(8deg); }
+      80% { transform: rotate(-2deg); }
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-top: 0.6rem;
+      font-weight: 350;
+      letter-spacing: -0.01em;
+    }
+
+    /* 项目区域标题 */
+    .section-title {
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    /* 项目卡片 —— 每行名称 + 介绍 */
+    .project-item {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+      padding: 0;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+
+    .project-item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .project-item:hover {
+      border-color: #cbd0dd;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+      transform: translateY(-1px);
+    }
+
+    .project-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 1.5rem 1.75rem;
+    }
+
+    .project-name {
+      font-size: 1.35rem;
+      font-weight: 570;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+      margin-bottom: 0.65rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-name .repo-icon {
+      font-size: 1.2rem;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .project-link:hover .project-name {
+      color: #000;
+    }
+
+    .project-link:hover .repo-icon {
+      opacity: 1;
+    }
+
+    /* 介绍文本：第二行 */
+    .project-description {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-weight: 380;
+      padding-left: 2px;
+    }
+
+    .project-description .emoji-bullet {
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+    }
+
+    .project-description .desc-text {
+      flex: 1;
+    }
+
+    /* 小细节：归档提示 */
+    .archive-note {
+      display: inline-block;
+      background: #f3f5fa;
+      border-radius: 40px;
+      padding: 0.1rem 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #4a4f66;
+      margin-left: 0.5rem;
+      letter-spacing: 0.01em;
+      border: 1px solid #e1e5ef;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    /* 页脚 */
+    .footer {
+      margin-top: 2.75rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #8a8f9e;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .footer a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-bottom: 1px dotted #c0c6d4;
+      transition: border-color 0.2s, color 0.2s;
+      font-weight: 450;
+    }
+
+    .footer a:hover {
+      color: var(--text-primary);
+      border-bottom-color: var(--text-primary);
+    }
+
+    .footer .domain-badge {
+      font-size: 0.8rem;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 60px;
+      padding: 0.2rem 0.8rem;
+      display: inline-block;
+      margin: 0 auto;
+      letter-spacing: 0.2px;
+      color: #3e3e52;
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 520px) {
+      body {
+        padding: 1rem 0.75rem;
+      }
+
+      .profile-card {
+        padding: 1.8rem 1.2rem;
+        border-radius: var(--radius-md);
+      }
+
+      .avatar {
+        width: 96px;
+        height: 96px;
+      }
+
+      .org-name {
+        font-size: 1.75rem;
+      }
+
+      .hello-world {
+        font-size: 1.8rem;
+        gap: 0.3rem 0.5rem;
+      }
+
+      .hello-world .wave {
+        font-size: 1.8rem;
+      }
+
+      .subhead {
+        font-size: 1rem;
+      }
+
+      .project-link {
+        padding: 1.2rem 1.2rem;
+      }
+
+      .project-name {
+        font-size: 1.2rem;
+      }
+
+      .project-description {
+        font-size: 0.95rem;
+      }
+
+      .archive-note {
+        font-size: 0.7rem;
+        padding: 0.05rem 0.5rem;
+        white-space: normal;
+      }
+    }
+
+    /* 保持设计干净——项目图标使用文字代替无用的svg */
+    .repo-icon {
+      display: inline-block;
+      font-size: 1.1rem;
+      filter: grayscale(0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <!-- 组织头像与名称 -->
+    <div class="org-header">
+      <img
+        class="avatar"
+        src="https://avatars.githubusercontent.com/u/320220143?s=600&v=4"
+        alt="冰门组织头像"
+        loading="lazy"
+      >
+      <h1 class="org-name">冰门</h1>
+      <span class="org-handle">@bingmen</span>
+    </div>
+
+    <!-- 主题：你好，世界 -->
+    <div class="greeting-section">
+      <div class="hello-world">
+        <span>你好，世界</span>
+        <span class="wave" role="img" aria-label="挥手">👋</span>
+      </div>
+      <p class="subhead">用代码连接美好 · bingmen.com</p>
+    </div>
+
+    <!-- 项目列表区域：一行名称，一行介绍 -->
+    <div class="section-title">
+      <span>📁 项目</span>
+    </div>
+
+    <!-- 项目: Bing 每日壁纸 - UHD 中文 (名称行 + 介绍行) -->
+    <div class="project-item">
+      <a
+        class="project-link"
+        href="https://github.com/bingmen/bing-UHD-cn"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="访问 Bing 每日壁纸 - UHD 中文"
+      >
+        <!-- 第一行：项目名称 -->
+        <div class="project-name">
+          <span class="repo-icon" aria-hidden="true">📦</span>
+          Bing 每日壁纸 - UHD 中文
+          <span class="archive-note">JSON + UHD + 缩略图 + 表格归档</span>
+        </div>
+        <!-- 第二行：项目介绍 -->
+        <div class="project-description">
+          <span class="emoji-bullet" aria-hidden="true">👀</span>
+          <span class="desc-text">
+            自动抓取 Bing 每日壁纸（中国地区），存储 UHD 和 320×240 格式，后者作为略缩图形成归档汇总表格。
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <!-- 可以在此处添加更多项目，保持一行名称一行介绍的结构，但当前仅有一个项目 -->
+
+    <!-- 项目: Bing 每日壁纸 - UHD (名称行 + 介绍行) -->
+    <div class="project-item">
+      <a
+        class="project-link"
+        href="https://github.com/bingmen/bing-UHD"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="访问 Bing 每日壁纸 - UHD"
+      >
+        <!-- 第一行：项目名称 -->
+        <div class="project-name">
+          <span class="repo-icon" aria-hidden="true">📦</span>
+          Bing 每日壁纸 - UHD
+          <span class="archive-note">JSON + 表格归档</span>
+        </div>
+        <!-- 第二行：项目介绍 -->
+        <div class="project-description">
+          <span class="emoji-bullet" aria-hidden="true">👀</span>
+          <span class="desc-text">
+            抓取 Bing 每日壁纸（九个地区）数据，存储 JSON、UHD 和缩略图，汇总表格。
+          </span>
+        </div>
+      </a>
+    </div>
+		
+    <!-- 页脚部分：域名与主页 -->
+    <div class="footer">
+      <div class="domain-badge">
+        🌐 <a href="https://bingmen.com" target="_blank" rel="noopener noreferrer">bingmen.com</a>
+      </div>
+      <div>
+        <a href="index.html">主页</a> · 
+        <a href="https://github.com/bingmen" target="_blank" rel="noopener noreferrer">GitHub 组织</a>
+      </div>
+      <div style="font-size: 0.75rem; opacity: 0.7; margin-top: 0.25rem;">
+        © 2026 冰门 · 你好，世界
+      </div>
+    </div>
+  </div>
+
+  <!-- 微小的交互增强：无额外脚本，仅依赖原生 CSS。如有需要可添加 analytics 但非必要 -->
+</body>
+</html>
