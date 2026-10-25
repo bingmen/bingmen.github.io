@@ -8,8 +8,6 @@
 
 **主题：** 实用工具 · 数据归档
 
----
-
 ## 📁 项目
 
 ### 🏞️ Bing 每日壁纸 - UHD 中文
@@ -20,8 +18,6 @@
 
 🔗 [github.com/bingmen/bing-UHD-cn](https://github.com/bingmen/bing-UHD-cn)
 
----
-
 ### 🌄 Bing 每日壁纸 - UHD
 
 **JSON + 表格归档**
@@ -30,13 +26,10 @@
 
 🔗 [github.com/bingmen/bing-UHD](https://github.com/bingmen/bing-UHD)
 
----
 
 ## 🌐 链接
 
 - 官网：[bingmen.com](https://bingmen.com)
 - GitHub 组织：[github.com/bingmen](https://github.com/bingmen)
-
----
 
 © 2026 · BINGMEN · 冰门
