@@ -1,6 +1,6 @@
 # BINGMEN·冰门
 
-> @bingmen · 用代码连接美好 · [bingmen.com](https://bingmen.com)
+> 用代码连接美好，续写无限可能。
 
 ## 你好，世界 👋
 
