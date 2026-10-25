@@ -1,4 +1,4 @@
-# 冰门
+# BINGMEN·冰门
 
 > @bingmen · 用代码连接美好 · [bingmen.com](https://bingmen.com)
 
