@@ -16,7 +16,7 @@
 
 自动抓取 Bing 每日壁纸（中国地区），存储 UHD 和 320×240 格式，后者作为缩略图形成归档汇总表格。
 
-🔗 [github.com/bingmen/bing-UHD-cn](https://github.com/bingmen/bing-UHD-cn)
+🔗 [bingmen/bing-UHD-cn](https://github.com/bingmen/bing-UHD-cn)
 
 ### 🌄 Bing 每日壁纸 - UHD
 
@@ -24,12 +24,12 @@
 
 抓取 Bing 每日壁纸（九个地区）数据，存储 JSON、UHD 和缩略图，汇总表格。
 
-🔗 [github.com/bingmen/bing-UHD](https://github.com/bingmen/bing-UHD)
+🔗 [bingmen/bing-UHD](https://github.com/bingmen/bing-UHD)
 
 
 ## 🌐 链接
 
-- 官网：[bingmen.com](https://bingmen.com)
-- GitHub 组织：[github.com/bingmen](https://github.com/bingmen)
+- 🏠 官网：[bingmen.com](https://bingmen.com)
+- 🐙 GitHub 组织：[github.com/bingmen](https://github.com/bingmen)
 
-© 2026 · BINGMEN · 冰门
+© 2026 · BINGMEN · 冰门  ⚡ 由 GitHub Pages 驱动
