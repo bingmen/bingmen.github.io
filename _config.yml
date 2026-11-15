@@ -39,4 +39,3 @@ include:
 exclude:
   - _config.yml
   - .github/
-
