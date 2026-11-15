@@ -39,6 +39,6 @@
 - 🏠 官网：[bingmen.com](https://bingmen.com)
 - 🐙 GitHub 组织：[github.com/bingmen](https://github.com/bingmen)
 
-ℹ️ 此页面 AI 生成 + 手动修改，部分内容夸大其词
+ℹ️ 此页面 AI 生成 + 手动修改，部分内容夸大其词。
 
 © 2026 · BINGMEN · 冰门  ⚡ 由 GitHub Pages 驱动
