@@ -19,7 +19,7 @@ show_downloads: false
 # Your Google Analytics tracking ID
 google_analytics:
 
-remote_theme: pages-themes/slate@v0.2.0
+remote_theme: pages-themes/primer@v0.6.0
 # add this line to the plugins list if you already have one
 plugins:
   - jekyll-github-metadata
