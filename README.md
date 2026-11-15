@@ -26,6 +26,13 @@
 
 🔗 [bingmen/bing-UHD](https://github.com/bingmen/bing-UHD)
 
+### 📱 词霸每日一句
+
+**JSON + 表格归档**
+
+ 词霸每日一句，收集时间段 2018-01-01 ~ 今日，每日自动运行工作流。
+
+🔗 [bingmen/iciba-dsapi](https://github.com/bingmen/iciba-dsapi)
 
 ## 🌐 链接
 
