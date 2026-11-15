@@ -2,7 +2,7 @@
 # github.com/shenjuexiao
 # 20261114
 
-# github.com/pages-themes/primer@v0.6.0
+# github.com/pages-themes/primer
 # _config.yml
 
 # The title of your site
@@ -15,7 +15,7 @@ show_downloads: false
 # Your Google Analytics tracking ID
 google_analytics:
 
-remote_theme: pages-themes/architect@v0.2.0
+remote_theme: pages-themes/primer@v0.6.0
 # add this line to the plugins list if you already have one
 plugins:
 - jekyll-remote-theme
