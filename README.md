@@ -8,23 +8,7 @@
 
 **主题：** 实用工具 · 数据归档
 
-## 📁 项目
-
-### 🏞️ Bing 每日壁纸 - UHD 中文
-
-**JSON + UHD + 缩略图 + 表格归档**
-
-自动抓取 Bing 每日壁纸（中国地区），存储 UHD 和 320×240 格式，后者作为缩略图形成归档汇总表格。
-
-🔗 [bingmen/bing-UHD-cn](https://github.com/bingmen/bing-UHD-cn)
-
-### 🌄 Bing 每日壁纸 - UHD
-
-**JSON + 表格归档**
-
-抓取 Bing 每日壁纸（九个地区）数据，存储 JSON、UHD 和缩略图，汇总表格。
-
-🔗 [bingmen/bing-UHD](https://github.com/bingmen/bing-UHD)
+## 🚀 项目
 
 ### 📱 词霸每日一句
 
